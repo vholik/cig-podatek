@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-const port = 3333;
+const port = 80;
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
