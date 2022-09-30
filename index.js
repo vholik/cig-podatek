@@ -1,9 +1,10 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
+const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -16,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.use("/", express.static("public"));
-
+app.use(cors());
 const SUBJECT = "Prośba o kontakt";
 
 app.get("/message", (req, res) => {
