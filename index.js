@@ -33,7 +33,7 @@ app.get("/message", (req, res) => {
       from: "transportcig@gmail.com",
       to: email,
       subject: SUBJECT,
-      text: `Message: ${message},\n Email: ${email},\n PhoneNumber: ${phone},\n Name: ${fullName}`,
+      text: `<h2>Text:<p> ${message}</p>,\n</h2><h2>Telefon:<p> ${phone}</p>,\n<h2>Nazwisko:<p> ${fullName}</p>`,
     },
     (err, info) => {
       if (err) return res.status(500).send();
