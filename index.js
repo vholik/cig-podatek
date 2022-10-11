@@ -31,7 +31,7 @@ app.get("/message", (req, res) => {
   transporter.sendMail(
     {
       from: "transportcig@gmail.com",
-      to: email,
+      to: "kontakt@cig-podatek.pl",
       subject: SUBJECT,
       text: `Text: ${message},\nTelefon: ${phone},\nNazwisko: ${fullName}`,
     },
