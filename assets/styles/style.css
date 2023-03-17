@@ -544,6 +544,7 @@
 @media screen and (max-width: 650px) {
   .team .slide__img img {
     object-fit: contain;
+    padding-left: 0px;
   }
 }
 .team .slide__name {
