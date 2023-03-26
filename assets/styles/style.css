@@ -543,7 +543,7 @@
 }
 @media screen and (max-width: 650px) {
   .team .slide__img img {
-    object-fit: contain;
+    object-fit: cover;
     padding-left: 0px;
   }
 }
@@ -604,6 +604,9 @@
 @media screen and (max-width: 650px) {
   .team .slide__img {
     width: 100%;
+  }
+  .team .slide__img {
+    height: 550px;
   }
 }
 .contact {
