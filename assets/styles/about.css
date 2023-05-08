@@ -59,7 +59,7 @@ a {
 
 .section-btn {
   font-weight: 500;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   background-color: transparent;
   border: none;
@@ -327,10 +327,10 @@ video {
     font-size: 24px;
     text-align: center;
   }
-  .main__inner .left .main-contact input {
+  .main__inner .left .wpcf7-form input {
     font-size: 24px;
   }
-  .main-contact {
+  .wpcf7-form {
     justify-content: center;
   }
   .phone {
@@ -356,7 +356,7 @@ video {
   .main__inner .contact-info a {
     font-size: 30px;
   }
-  .main__inner .left .main-contact input {
+  .main__inner .left .wpcf7-form input {
     max-width: 300px;
   }
   .main .main-title {
@@ -381,18 +381,23 @@ video {
   .header .logo img {
     width: 115px;
   }
-  .main__inner .left .main-contact input {
+  .main__inner .left .wpcf7-form input {
     font-size: 25px;
     max-width: 250px;
   }
-  .main__inner .left .main-contact button {
+  .main__inner .left .wpcf7-form button {
     font-size: 24px;
+  }
+
+  .white-navbar ul {
+    gap: 10px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 400px) {
-  .main__inner .left .main-contact input {
+  .main__inner .left .wpcf7-form input {
     font-size: 25px;
-    max-width: 150px;
+    max-width: 170px;
   }
   .main .main-title {
     font-size: 30px;
@@ -402,9 +407,9 @@ video {
   }
 }
 @media screen and (max-width: 350px) {
-  .main__inner .left .main-contact input {
+  .main__inner .left .wpcf7-form input {
     font-size: 25px;
-    max-width: 150px;
+    max-width: 170px;
   }
   .header .logo img {
     width: 90px;
@@ -413,4 +418,17 @@ video {
     height: 50px;
     top: 40px;
   }
-}/*# sourceMappingURL=about.css.map */
+}
+
+.not-found {
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 3rem;
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 550px) {
+  .not-found {
+    font-size: 1.5rem;
+  }
+}
