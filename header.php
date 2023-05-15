@@ -82,7 +82,6 @@
       alt="Unia Europejska"
       class="unia-logo"
     />
-
     <header class="header">
       <div class="logo">
         <a href="/">

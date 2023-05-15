@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
- 
     <main class="main" style="background-image: url(<?php the_field( 'hero_bg' ); ?>;)">
       <div class="container">
         <h1 class="main-title">
@@ -10,7 +9,6 @@ get_header();
         <div class="main__inner">
           <div class="left">
             <h1 class="main-info-title"><?php the_field( 'hero_subtitle' ); ?></h1>
-
             <?php echo do_shortcode( '[contact-form-7 id="162" title="Zostaw numer telefonu - oddzwonimy"]' ) ?>
           </div>
           <div class="contact-info">
@@ -91,8 +89,6 @@ get_header();
                   </div>
                 </div>
               </div>
-          
-            
           </div>
         </div>
         <img src="<?php the_field('about_image'); ?>" alt="Trucks" class="trucks" />
@@ -164,8 +160,6 @@ get_header();
 
           wp_reset_postdata();
           ?>
-
-
         </div>
         <div class="bottom">
           <div class="slider-btns-wrapper">
@@ -255,10 +249,8 @@ get_header();
 
               <?php
           }
-
           wp_reset_postdata();
           ?>
-         
         </div>
         <div class="bottom">
           <div class="slider-btns-wrapper">
@@ -272,6 +264,33 @@ get_header();
           <div class="bar">
             <div class="team-bar-progress"></div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="company" id="company">
+      <div class="container">
+        <h1 class="company__title uppercase">Zaufali nam:</h1>
+        <div class="company-slider">
+        <?php
+          $my_posts = new WP_Query(array(
+            'post_type' => 'company',
+            'posts_per_page' => -1,
+            'orderby' => 'date',
+            'order' => 'ASC',
+          ));
+
+          while ($my_posts->have_posts()) {
+              $my_posts->the_post();
+              ?>
+              <div class="slide">
+                  <div class="slide__img">
+                      <img src="<?php the_field('company_image'); ?>" alt="<?php the_title(); ?>" loading="lazy" />
+                  </div>
+              </div>
+              <?php
+          }
+          wp_reset_postdata();
+          ?>
         </div>
       </div>
     </div>
@@ -289,69 +308,6 @@ get_header();
         </div>
       </div>
     </div>
-    
-    <div class="company" id="company">
-      <div class="container">
-        <h1 class="company__title uppercase">Zaufali nam:</h1>
-        <div class="company-slider">
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://logowik.com/content/uploads/images/772_mercedes.jpg"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Opel-Logo_2017.svg/2520px-Opel-Logo_2017.svg.png"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://www.jakimkurierem.pl/wp-content/uploads/2018/03/logo-dpd-kurier.jpg"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://logowik.com/content/uploads/images/772_mercedes.jpg"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Opel-Logo_2017.svg/2520px-Opel-Logo_2017.svg.png"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slide__img">
-              <img
-                src="https://www.jakimkurierem.pl/wp-content/uploads/2018/03/logo-dpd-kurier.jpg"
-                alt="Bartek"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <div class="container">
       <h1 class="section-title">Kontakt</h1>
     </div>
